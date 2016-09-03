@@ -93,7 +93,8 @@
 
 </head>
 
-<body id="body" onload="myFunction()">
+<body id="body">
+	<!-- onload="myFunction()" -->
 
 	<!-- preloader -->
 	<div id="preloader">
@@ -127,24 +128,43 @@
 	</header>
 	<!-- /header -->
 
-
-
 	<!-- help -->
 	<section id="error" class="container">
-		<h1>404, Page not found</h1>
-		<p>The Page you are looking for doesn't exist or an other error
-			occurred.</p>
-		<h2>Oh noooooooo!!!</h2>
-		<a class="btn btn-success" href="index.html">GO BACK TO THE
-			HOMEPAGE</a>
+		<h1>
+			Help for <span id="Name"></span>
+		</h1>
+		<p>
+		<h3>
+			Description: <span id="Description">
+		</h3>
+		</p>
+		<br> <br>
 	</section>
 	<!-- /help -->
 
-
-	<script>
-		function myFunction() {
-			alert("Page is loaded:" + window.location.search.substring(1));
+	<script type="text/javascript">
+		function loadScript(scriptname) {
+			var snode = document.createElement('script');
+			snode.setAttribute('type', 'text/javascript');
+			snode.setAttribute('src', scriptname);
+			document.getElementsByTagName('head')[0].appendChild(snode);
 		}
+
+		function myFunction() {
+			var Name = 'ne';
+			loadScript('help/killaura.js');
+
+			var input = window.location.search.substring(1);
+			alert("input :" + input);
+
+			
+			document.getElementById('Name').innerHTML = Name;
+			document.getElementById('Description').innerHTML = Description;
+			document.getElementById('Video').innerHTML = Video;
+		}
+		document.addEventListener('DOMContentLoaded', function() {
+			myFunction()
+		}, false);
 	</script>
 
 	<!--Bottom-->
@@ -257,3 +277,4 @@
 
 </body>
 </html>
+
