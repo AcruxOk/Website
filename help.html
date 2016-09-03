@@ -116,27 +116,26 @@
 
 			setTimeout(
 					function() {
+						document.getElementById('Name').innerHTML = '<h1>Help for ' + Name + '</h1>';
+						document.getElementById('Description').innerHTML = '<h3>Description: ' + Description + '</h3>';
+						if(Video!='')
+							document.getElementById('Video').innerHTML = '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/' +Video +  '\" frameborder=\"0\" allowfullscreen></iframe>';
+						alert(input);
 						if (Name == "[object HTMLSpanElement]") {
-							window.location = "http://skillclient.tk/404.html";
+							document.getElementById('Name').innerHTML = '<h1>Invalid help-request</h1>';
+							document.getElementById('Description').innerHTML = '<h3>Error-Message: ' + Description + '</h3>';	
+							return;
 						}
-						document.getElementById('Name').innerHTML = Name;
-						document.getElementById('Description').innerHTML = Description;
-						document.getElementById('Video').innerHTML = '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/' +Video +  '\" frameborder=\"0\" allowfullscreen></iframe>';
 					}, 0);
 		}
 	</script>
 
 	<!-- help -->
 	<section id="error" class="container">
-		<h1>
-			Help for <span id="Name"></span>
-		</h1>
-		<p>
-		<h3>
-			Description: <span id="Description"></span>
-		</h3>
-		<br> <br>
-		<p id="Video">was geht?</p>
+		<p id="Name"></p>	
+		<p id="Description"></p>	
+		<br><br>
+		<p id="Video"></p>
 	</section>
 	<!-- /help -->
 
