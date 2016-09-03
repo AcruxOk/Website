@@ -113,7 +113,7 @@
 		function myFunction() {
 			var input = window.location.search.substring(1);
 			loadScript('help/' + input + '.js');
-
+			alert('wadwad' + Name);
 			setTimeout(
 					function() {
 						document.getElementById('Name').innerHTML = '<h1>Help for ' + Name + '</h1>';
@@ -125,7 +125,7 @@
 							document.getElementById('Description').innerHTML = '<h3>Error-Message: ' + Description + '</h3>';	
 							return;
 						}
-					}, 10);
+					}, 1000);
 		}
 	</script>
 
