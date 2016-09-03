@@ -128,20 +128,6 @@
 	</header>
 	<!-- /header -->
 
-	<!-- help -->
-	<section id="error" class="container">
-		<h1>
-			Help for <span id="Name"></span>
-		</h1>
-		<p>
-		<h3>
-			Description: <span id="Description">
-		</h3>
-		</p>
-		<br> <br>
-	</section>
-	<!-- /help -->
-
 	<script type="text/javascript">
 		function loadScript(scriptname) {
 			var snode = document.createElement('script');
@@ -151,13 +137,11 @@
 		}
 
 		function myFunction() {
-			var Name = 'ne';
 			loadScript('help/killaura.js');
 
 			var input = window.location.search.substring(1);
 			alert("input :" + input);
 
-			
 			document.getElementById('Name').innerHTML = Name;
 			document.getElementById('Description').innerHTML = Description;
 			document.getElementById('Video').innerHTML = Video;
@@ -167,16 +151,29 @@
 		}, false);
 	</script>
 
+	<!-- help -->
+	<section id="error" class="container">
+		<h1>
+			Help for <span id="Name"></span>
+		</h1>
+		<p>
+			<h3>
+			Description: <span id="Description"></span>
+		</h3>
+		<br> <br>
+	</section>
+	<!-- /help -->
+
 	<!--Bottom-->
-	<section id="bottom" class="center">
+			<section id="bottom" class="center">
 		<!--row-fluids-->
 		<div class="row-fluid">
 
 			<div class="span3">
 				<div class="status alert alert-success" style="display: none"></div>
 				<iframe
-					src="https://discordapp.com/widget?id=212607130723680257&theme=dark"
-					width="350" height="300" allowtransparency="true" frameborder="0"></iframe>
+							src="https://discordapp.com/widget?id=212607130723680257&theme=dark"
+							width="350" height="300" allowtransparency="true" frameborder="0"></iframe>
 			</div>
 
 			<div class="span3">
@@ -184,19 +181,19 @@
 
 				<script src="https://apis.google.com/js/platform.js"></script>
 				<div class="g-ytsubscribe" data-channelid="UCWVcd4RYT7Ph6aQwwP7fLeg"
-					data-layout="full" data-theme="dark" data-count="default"></div>
+							data-layout="full" data-theme="dark" data-count="default"></div>
 				<br> <br>
 				<script src="https://apis.google.com/js/platform.js"></script>
 				<div class="g-ytsubscribe" data-channelid="UCqxNH8uJVFT6-WyXkt5g17Q"
-					data-layout="full" data-theme="dark" data-count="default"></div>
+							data-layout="full" data-theme="dark" data-count="default"></div>
 
 				<h4>
 					<p>
 						<a href="https://twitter.com/MCmodding4K"
-							class="twitter-follow-button" data-size="large" data-dnt="true"
-							data-show-count="false">Follow @MCmodding4K</a>
+									class="twitter-follow-button" data-size="large" data-dnt="true"
+									data-show-count="false">Follow @MCmodding4K</a>
 						<script async src="//platform.twitter.com/widgets.js"
-							charset="utf-8"></script>
+									charset="utf-8"></script>
 					</p>
 
 					<p>
@@ -212,7 +209,8 @@
 	</section>
 
 	<!--Footer-->
-	<footer id="footer">
+	
+		<footer id="footer">
 		<div class="container">
 			<div class="row-fluid">
 				<div class="span5 cp">
