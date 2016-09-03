@@ -273,7 +273,11 @@ a .icon-stack, a .icon-spin {
 
 100%{
 -moz-transform
+
+
 :rotate(359deg)
+
+
 ;
 }
 }
@@ -284,7 +288,11 @@ a .icon-stack, a .icon-spin {
 
 100%{
 -webkit-transform
+
+
 :rotate(359deg)
+
+
 ;
 }
 }
@@ -295,7 +303,11 @@ a .icon-stack, a .icon-spin {
 
 100%{
 -o-transform
+
+
 :rotate(359deg)
+
+
 ;
 }
 }
@@ -306,7 +318,11 @@ a .icon-stack, a .icon-spin {
 
 100%{
 -ms-transform
+
+
 :rotate(359deg)
+
+
 ;
 }
 }
@@ -317,7 +333,11 @@ keyframes spin { 0%{
 
 100%{
 transform
+
+
 :rotate(359deg)
+
+
 ;
 }
 }

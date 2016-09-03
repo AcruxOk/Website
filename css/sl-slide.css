@@ -176,13 +176,29 @@
 100%
 {
 -webkit-transform
+
+
 :
+
  
+
 translateX
-(0px)
+
+
+(0
+px
+)
+
  
+
 rotate
-(0deg);
+
+
+(0
+deg
+);
+
+
 }
 }
 @
@@ -194,17 +210,37 @@ rotate
 100%
 {
 -moz-transform
+
+
 :
+
  
+
 translateX
-(0px)
+
+
+(0
+px
+)
+
  
+
 rotate
-(0deg);
+
+
+(0
+deg
+);
+
  
+
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -217,17 +253,37 @@ opacity
 100%
 {
 -o-transform
+
+
 :
+
  
+
 translateX
-(0px)
+
+
+(0
+px
+)
+
  
+
 rotate
-(0deg);
+
+
+(0
+deg
+);
+
  
+
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -240,17 +296,37 @@ opacity
 100%
 {
 -ms-transform
+
+
 :
+
  
+
 translateX
-(0px)
+
+
+(0
+px
+)
+
  
+
 rotate
-(0deg);
+
+
+(0
+deg
+);
+
  
+
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -263,17 +339,37 @@ keyframes roll { 0% {
 100%
 {
 transform
+
+
 :
+
  
+
 translateX
-(0px)
+
+
+(0
+px
+)
+
  
+
 rotate
-(0deg);
+
+
+(0
+deg
+);
+
  
+
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -285,10 +381,20 @@ opacity
 100%
 {
 -webkit-transform
+
+
 :
+
  
+
 translateY
-(0px);
+
+
+(0
+px
+);
+
+
 }
 }
 @
@@ -299,10 +405,20 @@ translateY
 100%
 {
 -moz-transform
+
+
 :
+
  
+
 translateY
-(0px);
+
+
+(0
+px
+);
+
+
 }
 }
 @
@@ -313,10 +429,20 @@ translateY
 100%
 {
 -o-transform
+
+
 :
+
  
+
 translateY
-(0px);
+
+
+(0
+px
+);
+
+
 }
 }
 @
@@ -327,10 +453,20 @@ translateY
 100%
 {
 -ms-transform
+
+
 :
+
  
+
 translateY
-(0px);
+
+
+(0
+px
+);
+
+
 }
 }
 @
@@ -341,10 +477,20 @@ keyframes moveUp { 0% {
 100%
 {
 transform
+
+
 :
+
  
+
 translateY
-(0px);
+
+
+(0
+px
+);
+
+
 }
 }
 @
@@ -355,8 +501,12 @@ translateY
 100%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -368,8 +518,12 @@ opacity
 100%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -381,8 +535,12 @@ opacity
 100%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -394,8 +552,12 @@ opacity
 100%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -407,8 +569,12 @@ keyframes fadeIn { 0% {
 100%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -420,11 +586,19 @@ opacity
 100%
 {
 -webkit-transform
+
+
 :
+
  
+
 scale
+
+
 (0
 .5
+
+
 );
 }
 }
@@ -436,11 +610,19 @@ scale
 100%
 {
 -moz-transform
+
+
 :
+
  
+
 scale
+
+
 (0
 .5
+
+
 );
 }
 }
@@ -452,11 +634,19 @@ scale
 100%
 {
 -o-transform
+
+
 :
+
  
+
 scale
+
+
 (0
 .5
+
+
 );
 }
 }
@@ -468,11 +658,19 @@ scale
 100%
 {
 -ms-transform
+
+
 :
+
  
+
 scale
+
+
 (0
 .5
+
+
 );
 }
 }
@@ -484,11 +682,19 @@ keyframes scaleDown { 0% {
 100%
 {
 transform
+
+
 :
+
  
+
 scale
+
+
 (0
 .5
+
+
 );
 }
 }
@@ -500,8 +706,12 @@ scale
 100%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 }
@@ -513,8 +723,12 @@ opacity
 100%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 }
@@ -526,8 +740,12 @@ opacity
 100%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 }
@@ -539,8 +757,12 @@ opacity
 100%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 }
@@ -552,8 +774,12 @@ keyframes fadeOut { 0% {
 100%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 }
