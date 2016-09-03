@@ -52,7 +52,7 @@
 </head>
 
 
-<body id="body">
+<body id="body" onload="myFunction()">
 	<!-- preloader -->
 	<div id="preloader">
 		<div class="loder-box">
@@ -114,7 +114,7 @@
 		function myFunction() {
 			var input = window.location.search.substring(1);
 			loadScript('help/' + input + '.js');
-			alert('wadwad' + Name);
+			document.getElementById('Name').innerHTML = 'Loading...';
 			setTimeout(
 					function() {
 						document.getElementById('Name').innerHTML = '<h1>Help for '
@@ -127,14 +127,13 @@
 							document.getElementById('Name').innerHTML = '<h1>Invalid help-request</h1>';
 							document.getElementById('Description').innerHTML = '<h3>Error-Message: '
 									+ Description + '</h3>';
+							document.getElementById('Video').innerHTML = '';
 							return;
 						}
-					}, 1000);
+					}, 100);
 		}
-		window.onload = function() {
-			alert('Dokument geladen');
-			function init();
-			function machwas();
+		function dokumentGeladen(e) {
+			alert("Das Ereignis " + e.type + " ist passiert.")
 		}
 	</script>
 
@@ -142,8 +141,7 @@
 	<section id="error" class="container">
 		<p id="Name"></p>
 		<p id="Description"></p>
-		<br>
-		<br>
+		<br> <br>
 		<p id="Video"></p>
 	</section>
 	<!-- /help -->
