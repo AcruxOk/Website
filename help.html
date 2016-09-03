@@ -41,8 +41,7 @@
 		a.async = 1;
 		a.src = g;
 		m.parentNode.insertBefore(a, m)
-	})(window, document, 'script',
-			'https://www.google-analytics.com/analytics.js', 'ga');
+	})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 	ga('create', 'UA-77379288-7', 'auto');
 	ga('send', 'pageview');
 </script>
@@ -107,22 +106,27 @@
 			document.getElementsByTagName('head')[0].appendChild(snode);
 		}
 
+		var i = 10;
+
 		function myFunction() {
 			var input = window.location.search.substring(1);
 			loadScript('help/' + input + '.js');
+			setTimeout(function() {
+				document.getElementById('Name').innerHTML = '<h1>Help for ' + Name + '</h1>';
+				document.getElementById('Description').innerHTML = '<h3>Description: ' + Description + '</h3>';
+				document.getElementById('Edit').innerHTML = '<a class=\"btn btn-primary btn-large\" href=\"https://github.com/MCmodding4K/Website/blob/gh-pages/help/' + input + '.js\" target=\"_blank\">Edit</a>'
+				if (Video != '')
+					document.getElementById('Video').innerHTML = '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/' +Video +  '\" frameborder=\"0\" allowfullscreen></iframe>';
 
-			setTimeout(
-					function() {
-						document.getElementById('Name').innerHTML = '<h1>Help for ' + Name + '</h1>';
-						document.getElementById('Description').innerHTML = '<h3>Description: ' + Description + '</h3>';
-						if(Video!='')
-							document.getElementById('Video').innerHTML = '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/' +Video +  '\" frameborder=\"0\" allowfullscreen></iframe>';
-						if (Name == "[object HTMLSpanElement]") {
-							document.getElementById('Name').innerHTML = '<h1>Invalid help-request</h1>';
-							document.getElementById('Description').innerHTML = '<h3>Error-Message: ' + Description + '</h3>';	
-							return;
-						}
-					}, 10);
+				if (Name == '[object HTMLParagraphElement]') {
+					document.getElementById('Name').innerHTML = '<h1>Invalid help-request</h1>';
+					document.getElementById('Description').innerHTML = '<h3>Error-Message: input: ' + input + ' Name: ' + Name + '</h3>';
+					document.getElementById('Video').innerHTML = '<h3>Reloading...' + i + '</h3>';
+					i = i + 20;
+					myFunction();
+					return;
+				}
+			}, i);
 		}
 	</script>
 
@@ -132,6 +136,7 @@
 		<p id="Description"></p>
 		<br> <br>
 		<p id="Video"></p>
+		<p id="Edit"></p>
 	</section>
 	<!-- /help -->
 
