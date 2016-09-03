@@ -46,20 +46,21 @@
 			'https://www.google-analytics.com/analytics.js', 'ga');
 	ga('create', 'UA-77379288-7', 'auto');
 	ga('send', 'pageview');
+	ga('set', 'anonymizeIp', true);
 </script>
 
 </head>
 
 
-<body id="body" onload="myFunction()">
-<!-- preloader -->
+<body id="body">
+	<!-- preloader -->
 	<div id="preloader">
 		<div class="loder-box">
 			<div class="battery"></div>
 		</div>
 	</div>
 	<!-- end preloader -->
-	
+
 	<!--Header-->
 	<header class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
@@ -83,24 +84,24 @@
 		</div>
 	</header>
 	<!-- /header -->
-	
-<!-- title -->
-    <section class="title">
-        <div class="container">
-            <div class="row-fluid">
-                <div class="span6">
-                    <h1>Help</h1>
-                </div>
-                <div class="span6">
-                    <ul class="breadcrumb pull-right">
-                        <li><a href="index.html">Home</a> <span class="divider">/</span></li>
-                        <li class="active">About Us</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /title -->   
+
+	<!-- title -->
+	<section class="title">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span6">
+					<h1>Help</h1>
+				</div>
+				<div class="span6">
+					<ul class="breadcrumb pull-right">
+						<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+						<li class="active">About Us</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /title -->
 
 	<script type="text/javascript">
 		function loadScript(scriptname) {
@@ -116,24 +117,33 @@
 			alert('wadwad' + Name);
 			setTimeout(
 					function() {
-						document.getElementById('Name').innerHTML = '<h1>Help for ' + Name + '</h1>';
-						document.getElementById('Description').innerHTML = '<h3>Description: ' + Description + '</h3>';
-						if(Video!='')
+						document.getElementById('Name').innerHTML = '<h1>Help for '
+								+ Name + '</h1>';
+						document.getElementById('Description').innerHTML = '<h3>Description: '
+								+ Description + '</h3>';
+						if (Video != '')
 							document.getElementById('Video').innerHTML = '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/' +Video +  '\" frameborder=\"0\" allowfullscreen></iframe>';
 						if (Name == "[object HTMLSpanElement]") {
 							document.getElementById('Name').innerHTML = '<h1>Invalid help-request</h1>';
-							document.getElementById('Description').innerHTML = '<h3>Error-Message: ' + Description + '</h3>';	
+							document.getElementById('Description').innerHTML = '<h3>Error-Message: '
+									+ Description + '</h3>';
 							return;
 						}
 					}, 1000);
+		}
+		window.onload = function() {
+			alert('Dokument geladen');
+			function init();
+			function machwas();
 		}
 	</script>
 
 	<!-- help -->
 	<section id="error" class="container">
-		<p id="Name"></p>	
-		<p id="Description"></p>	
-		<br><br>
+		<p id="Name"></p>
+		<p id="Description"></p>
+		<br>
+		<br>
 		<p id="Video"></p>
 	</section>
 	<!-- /help -->
