@@ -115,9 +115,11 @@
 				document.getElementById('Name').innerHTML = '<h1>Help for ' + Name + '</h1>';
 				document.getElementById('Description').innerHTML = '<h3>Description: ' + Description + '</h3>';
 				document.getElementById('Edit').innerHTML = '<a class=\"btn btn-primary btn-large\" href=\"https://github.com/MCmodding4K/Website/blob/gh-pages/help/' + input + '.js\" target=\"_blank\">Edit</a>'
-				if (Video != '')
+				if (Video != '') {
 					document.getElementById('Video').innerHTML = '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/' +Video +  '\" frameborder=\"0\" allowfullscreen></iframe>';
-
+				} else {
+					document.getElementById('Video').innerHTML = 'There is no Video for this Module so far. If you made a Video about this Modules, you can send me a message and maybe I\'ll add it here :)';
+				}
 				if (Name == '[object HTMLParagraphElement]') {
 					document.getElementById('Name').innerHTML = '<h1>Invalid help-request</h1>';
 					document.getElementById('Description').innerHTML = '<h3>Error-Message: input: ' + input + ' Name: ' + Name + '</h3>';
